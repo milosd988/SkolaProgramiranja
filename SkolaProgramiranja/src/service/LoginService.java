@@ -17,4 +17,16 @@ public class LoginService {
 		
 	}
 
+
+	public boolean validacijaUseraIPassworda(String userName, String password) {
+
+		return validacija.validacijaUseraIPassworda(userName, password);
+	}
+
+
+	public User daLiPostojiUser(String userName, String password) {
+
+		return loginDao.daLiPostojiUser(userName, password);
+	}
+
 }
