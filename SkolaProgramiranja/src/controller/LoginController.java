@@ -7,6 +7,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+
+import service.LoginService;
+
 /**
  * Servlet implementation class LoginController
  */
@@ -34,6 +38,19 @@ public class LoginController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Inside doPost() method");
+		
+		LoginService service = new LoginService();
+		
+		//prihvatamo parametre iz request object-a
+		String userName = request.getParameter("userName");
+		String password = request.getParameter("password");
+		
+		System.out.println("UserName: " + userName);
+		System.out.println("Password: " + password);
+		
+		
+		
+		
 	}
 
 }
