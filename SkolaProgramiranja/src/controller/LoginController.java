@@ -63,6 +63,7 @@ public class LoginController extends HttpServlet {
 			User user = service.daLiPostojiUser(userName, password);
 			if(user != null) {
 				//2b.ako postoji user prebaciti ga na njegovu stranicu
+				//otvaramo http sesiju
 				HttpSession session = request.getSession();
 				session.setAttribute("user", user);
 				if(user.getUserType() == UserType.ADMINISTRACIJA) {
