@@ -8,27 +8,27 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Admin stranica</title>
+
+<link type="text/css" rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-	<% User user = (User)session.getAttribute("user"); %>
-	<h1>Dobrodosli na Administratorsku stranicu</h1>
-	<p>Ulogovan je: <%=user.getUsername() %></p>
 	
-	<table border = 1>
-		<tr>
-			<th>ID</th>
-			<th>Ime</th>
-		</tr>
-		<%
-			for(int i = 1; i <= 10; i++){
-		%>
-		
-			<tr>
-				<td><%=i %></td>
-				<td>Ime<%=i %></td>
-			</tr>
-		<% } %>
-	</table>
+	<jsp:useBean id="user" scope="session" class="model.User"></jsp:useBean>
+	<h1>Dobrodosli na Administratorsku stranicu</h1>
+	<p>Ulogovan je: ${user.username} </p>
+	
+	
+	<input type="button" value="Logout"
+			onclick="window.location.href='logout.jsp'"
+			class="logout-button" /> <br><br>
+	
+	<input type="button" value="Add student"
+			onclick="window.location.href='add-student.jsp'"
+			class="add-student-button " />		
+			
+			
+	
+	
 	
 </body>
 </html>
