@@ -20,10 +20,10 @@
 	<div id="container">
 		<h3>Add Student</h3>
 
-		<form action="#" method="get">
+		<form action="../AddStudentController" method="get">
 
 
-			<table>
+			<table border="1">
 				<tbody>
 					<tr>
 						<td><label>UserName:</label></td>
@@ -56,6 +56,10 @@
 					<tr>
 						<td><label>City:</label></td>
 						<td><input type="text" name="city" /></td>
+					</tr>
+					<tr>
+						<td><label>Address:</label></td>
+						<td><input type="text" name="street" /></td>
 					</tr>
 					<tr>
 						<td><label>Index:</label></td>
