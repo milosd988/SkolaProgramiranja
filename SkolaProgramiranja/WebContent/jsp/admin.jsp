@@ -24,10 +24,16 @@
 	
 	<input type="button" value="Add student"
 			onclick="window.location.href='add-student.jsp'"
-			class="add-student-button " />		
+			class="add-student-button " />	
+			
+	<input type="button" value="Add professor"
+			onclick="window.location.href='add-profesor.jsp'"
+			class="add-student-button " />	
 			
 			
-	
+	<input type="button" value="Add Admin"
+			onclick="window.location.href='add-admin.jsp'"
+			class="add-student-button " />	
 	
 	
 </body>
