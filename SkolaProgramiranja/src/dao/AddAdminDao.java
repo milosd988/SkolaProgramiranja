@@ -2,7 +2,7 @@ package dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
+
 
 
 
@@ -11,7 +11,7 @@ import model.User;
 
 public class AddAdminDao {
 	
-	SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+	SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 	
 	
 

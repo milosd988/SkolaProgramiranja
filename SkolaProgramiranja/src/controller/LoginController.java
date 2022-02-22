@@ -28,16 +28,9 @@ public class LoginController extends HttpServlet {
     }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Inside doGet() method");
-	}
-
-	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Inside doPost() method");
 		
 		LoginService service = new LoginService();
@@ -84,13 +77,6 @@ public class LoginController extends HttpServlet {
 				//2a.ako ne postoji vrati odgovor da pokusa ponovo logovanje
 				response.sendRedirect("view/login.html");
 			}
-			
-			
-			
-			
-			
-			
-			
 		}
 		
 		

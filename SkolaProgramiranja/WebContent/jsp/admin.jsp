@@ -34,6 +34,18 @@
 	<input type="button" value="Add Admin"
 			onclick="window.location.href='add-admin.jsp'"
 			class="add-student-button " />	
+			
+	<input type="button" value="Add Predmet"
+			onclick="window.location.href='add-predmet.jsp'"
+			class="add-student-button " />
+			
+	<input type="button" value="Add Smer"
+			onclick="window.location.href='add-smer.jsp'"
+			class="add-student-button " />
+	
+	<input type="button" value="Lista Profesora"
+			onclick="window.location.href='../ProfessorListController'"
+			class="add-student-button " />	
 	
 	
 </body>

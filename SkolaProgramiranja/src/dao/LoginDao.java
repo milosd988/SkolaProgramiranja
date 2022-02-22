@@ -17,7 +17,7 @@ import model.UserDetails;
 
 public class LoginDao {
 	
-	SessionFactory sf = new Configuration().configure().buildSessionFactory();
+	SessionFactory sf = HibernateUtil.getSessionFactory();
 	
 	public void upisiUsera(User user, UserDetails details) {
 		

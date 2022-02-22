@@ -3,7 +3,9 @@ package common;
 import model.Address;
 import model.Administrator;
 import model.Contact;
+import model.Predmet;
 import model.Profesor;
+import model.Smer;
 import model.User;
 import model.UserDetails;
 import model.UserType;
@@ -114,6 +116,25 @@ public class CommonMethods {
 
 		
 		return administrator;
+	}
+
+	public Predmet addPredmet(String nazivPredmeta, String sifraPredmeta) {
+		
+		Predmet predmet = new Predmet();
+		
+		predmet.setNazivPredmeta(nazivPredmeta);
+		predmet.setSifraPredmeta(sifraPredmeta);
+
+		return predmet;
+	}
+
+	public Smer addSmer(String nazivSmera, String sifraSmera) {
+		
+		Smer smer = new Smer();
+		smer.setSmerName(nazivSmera);
+		smer.setSifraSmera(sifraSmera);
+
+		return smer;
 	}
 
 }
