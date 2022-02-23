@@ -8,6 +8,7 @@ import javax.persistence.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
+import model.Predmet;
 import model.ProfesorList;
 
 public class ProfessorListDao {
@@ -69,6 +70,29 @@ public class ProfessorListDao {
 		}
 
 		
+	}
+
+	public List<Predmet> getPredmet() {
+		
+		List<Predmet> predmeti = new ArrayList<>();
+		Session session = sessionFactory.openSession();
+		session.beginTransaction();
+		
+		try {
+			String sql = "from Predmet";
+			
+			Query query = session.createQuery(sql);
+			List<Predmet> resultList = query.getResultList();
+			
+			
+			session.getTransaction().commit();
+			return predmeti;
+		} catch (Exception e) {
+			System.out.println("Something went wrong!!!" + e);
+			return null;
+		} finally {
+			session.close();
+		}
 	}
 
 }

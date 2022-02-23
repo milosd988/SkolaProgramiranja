@@ -3,6 +3,7 @@ package service;
 import java.util.List;
 
 import dao.ProfessorListDao;
+import model.Predmet;
 import model.ProfesorList;
 
 public class ProfessorListService {
@@ -12,5 +13,10 @@ public class ProfessorListService {
 	public List<ProfesorList> getProfessorList() {
 
 		return dao.getProfessorList();
+	}
+
+	public List<Predmet> getPredmet() {
+
+		return dao.getPredmet();
 	}
 }
