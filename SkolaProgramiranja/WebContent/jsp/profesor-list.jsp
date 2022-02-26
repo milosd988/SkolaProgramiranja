@@ -16,7 +16,7 @@
 <body>
 	<h1>Profesor List</h1>
 	<jsp:useBean id="professorList" scope="request" class="java.util.ArrayList"></jsp:useBean>
-	<jsp:useBean id="listaPredmeta" scope="request" class="java.util.ArrayList"></jsp:useBean>
+	
 	<table border="1">
 		<tr>
 			<th>ID</th>

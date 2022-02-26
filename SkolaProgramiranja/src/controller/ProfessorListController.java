@@ -29,13 +29,13 @@ public class ProfessorListController extends HttpServlet {
 		ProfessorListService service = new ProfessorListService();
 		
 		List<ProfesorList> professsorList = service.getProfessorList();
-		List<Predmet> listaPredmeta = service.getPredmet();
+		
 		
 		System.out.println("U listi ima " + professsorList.size() + " prfesora");
 		
 		//prosledjujemo listu profesora u request objekat
 		request.setAttribute("professorList", professsorList);
-		request.setAttribute("listaPredmeta", listaPredmeta);
+		
 		//preko dispatchera odredjujemo putanju gde prosledjujemo listu
 		RequestDispatcher dispatcher = request.getRequestDispatcher("jsp/profesor-list.jsp");
 		//saljemo request na jsp stranicu 
