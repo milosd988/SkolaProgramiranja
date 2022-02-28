@@ -5,10 +5,12 @@ import java.util.List;
 
 import javax.persistence.Query;
 
+import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 import model.Predmet;
+import model.Profesor;
 import model.ProfesorList;
 
 public class ProfessorListDao {
@@ -87,6 +89,26 @@ public class ProfessorListDao {
 			
 			session.getTransaction().commit();
 			return predmeti;
+		} catch (Exception e) {
+			System.out.println("Something went wrong!!!" + e);
+			return null;
+		} finally {
+			session.close();
+		}
+	}
+
+	public Profesor getProfesorId(String idProfesor) {
+		
+		Profesor profesor = new Profesor();
+		Session session = sessionFactory.openSession();
+		session.beginTransaction();
+		
+		try {
+			
+			profesor = session.get(Profesor.class, Integer.parseInt(idProfesor));
+			Hibernate.initialize(profesor.getPredmetiNaKojimaPredaje());
+			session.getTransaction().commit();
+			return profesor;
 		} catch (Exception e) {
 			System.out.println("Something went wrong!!!" + e);
 			return null;

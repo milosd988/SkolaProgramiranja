@@ -47,7 +47,7 @@
 				<td>${list.address}</td>
 				<td>${list.idNumber}</td>
 				<td>
-					<c:url var = "link" value="jsp/predmet-profesor.jsp">
+					<c:url var = "link" value="PredmetiProfesoriController">
 						<c:param name="idProfesor" value="${list.idProfesor}"></c:param>
 					</c:url>
 					<a href="${link}"><button>PREDMETI PROFESORA</button></a>

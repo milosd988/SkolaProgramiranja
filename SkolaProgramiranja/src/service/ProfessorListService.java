@@ -4,6 +4,7 @@ import java.util.List;
 
 import dao.ProfessorListDao;
 import model.Predmet;
+import model.Profesor;
 import model.ProfesorList;
 
 public class ProfessorListService {
@@ -18,5 +19,11 @@ public class ProfessorListService {
 	public List<Predmet> getPredmet() {
 
 		return dao.getPredmet();
+	}
+
+	public Profesor getProfesorId(String idProfesor) {
+
+		
+		return dao.getProfesorId(idProfesor);
 	}
 }
